@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {{if hasmath}} {{insert head_katex.html }}   {{end}}
   {{if hascode}} {{insert head_highlight.html }}   {{end}}
-
   <link href="/css/judoc.css" rel="stylesheet">
   <link href="/css/vela.css" rel="stylesheet">
   <script src="/libs/vela/jquery.min.js"></script>
-
   <link rel="icon" href="/assets/infra/favicon.png">
-
   <title>JuDoc Example | Vela</title>
+  <script src="/libs/lunr/lunr.min.js"></script>
+  <script src="/libs/lunr/lunr_index.js"></script>
+  <script src="/libs/lunr/lunrclient.min.js"></script>
 </head>
 <body>
   <div class="main-nav" id="menu">
@@ -33,6 +33,10 @@
         </li>
         <li><a href="/pub/menu3.html">Menu 3</a></li>
       </ul>
+      <form id="lunrSearchForm" name="lunrSearchForm">
+        <input class="search-input" name="q" placeholder="Enter search term" type="text">
+        <input type="submit" value="Search" formaction="/search.html">
+      </form>
     </nav>
   </div> <!-- main nav menu -->
 

@@ -9,14 +9,14 @@
    <!-- Syntax highlighting via Prism, note: restricted langs -->
 <link rel="stylesheet" href="/JuDocTest/libs/highlight/github.min.css">
    
-
   <link href="/JuDocTest/css/judoc.css" rel="stylesheet">
   <link href="/JuDocTest/css/vela.css" rel="stylesheet">
   <script src="/JuDocTest/libs/vela/jquery.min.js"></script>
-
   <link rel="icon" href="/JuDocTest/assets/infra/favicon.png">
-
   <title>JuDoc Example | Vela</title>
+  <script src="/JuDocTest/libs/lunr/lunr.min.js"></script>
+  <script src="/JuDocTest/libs/lunr/lunr_index.js"></script>
+  <script src="/JuDocTest/libs/lunr/lunrclient.min.js"></script>
 </head>
 <body>
   <div class="main-nav" id="menu">
@@ -37,6 +37,10 @@
         </li>
         <li><a href="/JuDocTest/pub/menu3.html">Menu 3</a></li>
       </ul>
+      <form id="lunrSearchForm" name="lunrSearchForm">
+        <input class="search-input" name="q" placeholder="Enter search term" type="text">
+        <input type="submit" value="Search" formaction="/JuDocTest/search.html">
+      </form>
     </nav>
   </div> <!-- main nav menu -->
 
